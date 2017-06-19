@@ -4,6 +4,13 @@ class Restaurant():
 		"""初始化属性"""
 		self.restaurant_name = restaurant_name
 		self.cuisine_type = cuisine_type
+		self.number_served = 0
+
+	def set_number_served(self, value):
+		self.number_served = value
+
+	def increment_number_served(self, increment):
+		self.increment_number_served += increment
 
 	def decribe_restaurant(self):
 		"""打印类的两个属性"""
