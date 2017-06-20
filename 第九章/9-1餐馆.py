@@ -20,6 +20,23 @@ class Restaurant():
 		"""显示餐馆的营业状态"""
 		print("餐馆正在营业")
 
+
+class IceCreamStand(Restaurant):
+	"""继承Restaurant类"""
+
+	def __init__(self, restaurant_name, cuisine_type,flavors):
+		"""初始化父类信息"""
+		super().__init__(restaurant_name, cuisine_type)
+		self.flavors = flavors
+
+	def describe(self):
+		"""显示这些冰淇淋的方法"""
+		print("======")
+		print(self.flavors)
+		print("======")	
+
 restaurant = Restaurant('每日一餐', '早餐')
 restaurant.decribe_restaurant()
 restaurant.open_restaurant()
+test = IceCreamStand('每日一餐', '早餐',[1,2,3])
+test.describe()

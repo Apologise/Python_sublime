@@ -22,6 +22,32 @@ class User():
 		"""问候用户"""
 		print(self.first_name + self.last_name + "你好～")
 
+
+class Privileges():
+	"""模拟特权类"""
+
+	def __init__(self, privileges):
+		"""初始化特权类"""
+		self.privileges = privileges
+
+
+class Admin(User):
+	"""管理员测试类"""
+
+	def __init__(self, first_name, last_name, info, login_attempts, privileges):
+		"""初始化父类以及初始化子类的privileges属性"""
+		super().__init__(first_name, last_name, info, login_attempts)
+		self.privileges = privileges
+		self.privileges = Privileges()	
+
+	def show_privileges(self):
+		"""显示权限列表"""
+		print(self.privileges)
+
+
+admin = Admin("杨","浩","世上最帅的人",0, "他可以管理一切")
+admin.show_privileges()
+print("==========================")
 guy = User("杨","浩","世上最帅的人",0)
 guy.describe_user()
 guy.greet_user()
