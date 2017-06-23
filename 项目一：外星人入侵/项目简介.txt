@@ -24,3 +24,8 @@
 		alien_invasion.py
 		用元祖bg_color(230,230,230)保存RGB颜色。
 		调用方法screen.fill()，用背景色填充屏幕；这个方法只接受一个实参，一种颜色
+
+		2.2.3 创建设置类
+		每次给游戏添加新功能时，通常引入一些新的设置。因此编写一个类来保存游戏的设置参数是非常有必要的。
+		settings.py
+		在主程序中，我们导入Settings类，调用pygame.init()，在创建一个Settings的一个实例，并将其储存在变量ai_settings中。
