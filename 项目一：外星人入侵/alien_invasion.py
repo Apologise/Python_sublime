@@ -28,8 +28,8 @@ def run_game():
 	while True:
 		#监视键盘和鼠标事件
 		gf.check_events(ai_settings, screen, ship, bullets)
-		ship.update()
-		bullets.update()
+		ship.update(ai_settings, screen, ship, bullets)
+		gf.update_bullets(bullets)
 		gf.update_screen(ai_settings, screen, ship, bullets)
 
 
